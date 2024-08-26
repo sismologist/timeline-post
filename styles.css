@@ -1,0 +1,382 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c0c0c;
+    margin: 0;
+    padding: 0px;
+}
+
+h1 {
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline-container {
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Línea vertical de la línea de tiempo */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #a400c9;
+    transform: translateX(-50%);
+}
+
+/* Elementos de la línea de tiempo */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Alineación de las etapas */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right; /* Alinea el texto del contenedor a la izquierda */
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left; /* Alinea el texto del contenedor a la derecha */
+}
+
+/* Punto que conecta la etapa con la línea central */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #a400c9;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #faf0ff;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+    right: auto;
+}
+
+/* Estilos para las secciones */
+.timeline-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-6 {
+    background-color: #dbcdf3;
+}
+
+.section-1 {
+    background-color: #f8d5b4;
+}
+
+.section-2 {
+    background-color: #fff4d0;
+}
+
+.section-3 {
+    background-color: #f5ffd2;
+}
+
+.section-4 {
+    background-color: #c8ffdd;
+}
+
+.section-5 {
+    background-color: #d0f6ff;
+}
+/* Estilos para los títulos de las secciones */
+.section-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estilos para el cuadro de texto que aparece al pasar el ratón sobre el título */
+.section-info {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+/* Mostrar la información al pasar el ratón */
+.section-title:hover + .section-info {
+    display: block;
+}
+
+/* Estilos para ocultar la información cuando se mueve el ratón fuera del título */
+.timeline-section:hover .section-info {
+    display: block;
+}
+
+/* Título de cada etapa para los contenedores impares */
+.timeline-item:nth-child(odd) h2 {
+    font-size: 18px;
+    color: #4f46e5;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-align: right; /* Alinea el título a la derecha */
+}
+
+/* Título de cada etapa para los contenedores pares */
+.timeline-item:nth-child(even) h2 {
+    font-size: 18px;
+    color: #4f46e5;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+
+/* Contenido de cada etapa */
+.timeline-content {
+    margin-top: 10px;
+    display: none;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Botón "Mostrar más" */
+.more-info1 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #c9401e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info1:hover {
+    background-color: #913120;
+}
+
+.more-info2 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #c9a11e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info2:hover {
+    background-color: #916a20;
+}
+
+.more-info3 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #b8c91e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info3:hover {
+    background-color: #8a9120;
+}
+
+.more-info4 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #3ac91e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info4:hover {
+    background-color: #209133;
+}
+
+.more-info5 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #1e76c9;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info5:hover {
+    background-color: #203a91;
+}
+
+.more-info6:hover {
+    background-color: #3730a3;
+}
+
+.more-info6 {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Información adicional */
+.additional-info1 {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #ffe0e0;
+    border-radius: 4px;
+    color: #333;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info2 {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fff3e0;
+    border-radius: 4px;
+    color: #333;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info3 {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fcffe0;
+    border-radius: 4px;
+    color: #333;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info4 {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e0ffe9;
+    border-radius: 4px;
+    color: #333;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info5 {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e0edff;
+    border-radius: 4px;
+    color: #333;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info6 {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9e0ff;
+    border-radius: 4px;
+    color: #333;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-button {
+    position: fixed;
+    top: 35px;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #a400c9;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* Estilos para la ventana de información */
+.info-window {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.ref-button {
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a400c9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ref-button:hover {
+    background-color: rgb(78, 21, 92)
+}
+
+.ref-window {
+    margin-left: 50px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 90%;
+}
